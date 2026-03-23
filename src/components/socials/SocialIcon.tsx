@@ -1,3 +1,4 @@
+'use client';
 import { SocialLinkType } from '@/lib/types';
 
 import SocialLink from './SocialLink';
