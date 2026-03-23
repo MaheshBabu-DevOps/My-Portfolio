@@ -1,8 +1,13 @@
+const path = require('path');
+
 /** @type {import('next').NextConfig} */
 module.exports = {
   reactStrictMode: true,
-  experimental: {
-    serverComponentsExternalPackages: ['@iconify/react'],
+  webpack: (config, { isServer }) => {
+    if (isServer) {
+      config.resolve.alias['@iconify/react'] = path.join(__dirname, 'src/lib/iconify-stub.js');
+    }
+    return config;
   },
   images: {
     remotePatterns: [
