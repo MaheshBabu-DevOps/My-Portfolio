@@ -1,6 +1,8 @@
 'use client';
-import { Icon } from '@iconify/react';
+import dynamic from 'next/dynamic';
 import Image from 'next/image';
+
+const Icon = dynamic(() => import('@iconify/react').then((m) => ({ default: m.Icon })), { ssr: false });
 
 type Props = {
   src: string;

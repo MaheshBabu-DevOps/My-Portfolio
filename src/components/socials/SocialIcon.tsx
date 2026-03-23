@@ -1,8 +1,10 @@
 'use client';
 import { SocialLinkType } from '@/lib/types';
+import dynamic from 'next/dynamic';
 
 import SocialLink from './SocialLink';
-import { Icon } from '@iconify/react';
+
+const Icon = dynamic(() => import('@iconify/react').then((m) => ({ default: m.Icon })), { ssr: false });
 
 const SocialIcon = ({ icon, url }: SocialLinkType) => {
   return (

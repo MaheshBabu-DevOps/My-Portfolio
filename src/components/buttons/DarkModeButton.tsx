@@ -1,7 +1,8 @@
 'use client';
 import { useTheme } from '@/lib/hooks/use-theme';
 
-import { Icon } from '@iconify/react';
+import dynamic from 'next/dynamic';
+const Icon = dynamic(() => import('@iconify/react').then((m) => ({ default: m.Icon })), { ssr: false });
 import { motion, MotionProps } from 'framer-motion';
 
 interface Props extends React.ButtonHTMLAttributes<HTMLButtonElement> {
