@@ -2,7 +2,8 @@
 import { ProjectType } from '@/lib/types';
 import { blurImageURL } from '@/lib/utils/config';
 
-import { Icon } from '@iconify/react';
+import dynamic from 'next/dynamic';
+const Icon = dynamic(() => import('@iconify/react').then((m) => ({ default: m.Icon })), { ssr: false });
 import { motion, MotionProps } from 'framer-motion';
 import Image from 'next/image';
 import { useEffect, useState } from 'react';
