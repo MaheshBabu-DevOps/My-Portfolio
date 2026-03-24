@@ -2,8 +2,8 @@
 import { ProjectType } from '@/lib/types';
 import { blurImageURL } from '@/lib/utils/config';
 
-import dynamic from 'next/dynamic';
-const Icon = dynamic(() => import('@iconify/react').then((m) => ({ default: m.Icon })), { ssr: false });
+import ClientIcon from '@/components/icons/ClientIcon';
+
 import { motion, MotionProps } from 'framer-motion';
 import Image from 'next/image';
 import { useEffect, useState } from 'react';
@@ -63,14 +63,14 @@ const ProjectCard = ({
                 className="block duration-200 hover:text-accent"
                 target="_blank"
               >
-                <Icon icon="tabler:brand-github" width={20} height={20} />
+                <ClientIcon icon="tabler:brand-github" width={20} height={20} />
               </a>
               <a
                 href={url}
                 className="block duration-200 hover:text-accent"
                 target="_blank"
               >
-                <Icon icon="ci:external-link" width={22} height={22} />
+                <ClientIcon icon="ci:external-link" width={22} height={22} />
               </a>
             </div>
           </div>

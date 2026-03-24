@@ -3,16 +3,16 @@ const path = require('path');
 /** @type {import('next').NextConfig} */
 module.exports = {
   reactStrictMode: true,
-  webpack: (config) => {
-    // Apply to ALL compilations (server + client).
-    // The stub uses `typeof window` so webpack's dead-code elimination
-    // removes the real iconify from server bundles at compile time.
-    config.resolve.alias = {
-      ...(config.resolve.alias || {}),
-      '@iconify/react': path.join(__dirname, 'src/lib/iconify-stub.js'),
-      // Points directly to the real package, bypassing the alias above.
-      '@iconify/react-impl': require.resolve('@iconify/react'),
-    };
+  webpack: (config, { isServer }) => {
+    if (isServer) {
+      // Safety net: replace @iconify/react with a null stub in the server
+      // bundle. Primary protection is ClientIcon using useEffect so the
+      // real module is never imported server-side at all.
+      config.resolve.alias = {
+        ...(config.resolve.alias || {}),
+        '@iconify/react': path.join(__dirname, 'src/lib/iconify-stub.js'),
+      };
+    }
     return config;
   },
   images: {

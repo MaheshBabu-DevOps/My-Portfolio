@@ -1,8 +1,7 @@
 'use client';
-import dynamic from 'next/dynamic';
-import Image from 'next/image';
+import ClientIcon from '@/components/icons/ClientIcon';
 
-const Icon = dynamic(() => import('@iconify/react').then((m) => ({ default: m.Icon })), { ssr: false });
+import Image from 'next/image';
 
 type Props = {
   src: string;
@@ -15,7 +14,7 @@ const SkillIcon = ({ src, name }: Props) => {
       {src.startsWith('/') ? (
         <Image src={src} alt={name} width={32} height={32} />
       ) : (
-        <Icon icon={src} width="32" height="32" />
+        <ClientIcon icon={src} width="32" height="32" />
       )}
       <div className="absolute invisible px-2 py-1 text-sm text-white capitalize duration-200 rounded opacity-0 w-max group-hover:opacity-100 group-hover:visible -top-8 bg-slate-900/75 dark:bg-slate-700/90 dark:text-slate-100">
         {name}

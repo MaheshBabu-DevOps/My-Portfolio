@@ -1,8 +1,8 @@
 'use client';
 import { useTheme } from '@/lib/hooks/use-theme';
 
-import dynamic from 'next/dynamic';
-const Icon = dynamic(() => import('@iconify/react').then((m) => ({ default: m.Icon })), { ssr: false });
+import ClientIcon from '@/components/icons/ClientIcon';
+
 import { motion, MotionProps } from 'framer-motion';
 
 interface Props extends React.ButtonHTMLAttributes<HTMLButtonElement> {
@@ -27,7 +27,7 @@ const DarkModeButton = ({
       onClick={clickHandler}
       {...rest}
     >
-      <Icon
+      <ClientIcon
         icon={isDarkMode ? 'carbon:sun' : 'ph:moon'}
         width="26"
         height="26"
