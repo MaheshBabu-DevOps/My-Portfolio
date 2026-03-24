@@ -3,6 +3,9 @@ const path = require('path');
 /** @type {import('next').NextConfig} */
 module.exports = {
   reactStrictMode: true,
+  experimental: {
+    instrumentationHook: true,
+  },
   webpack: (config, { isServer }) => {
     if (isServer) {
       config.resolve.alias['@iconify/react'] = path.join(__dirname, 'src/lib/iconify-stub.js');
