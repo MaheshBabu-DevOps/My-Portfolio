@@ -9,6 +9,15 @@ export const projectsSection: ProjectsSectionType = {
     projects: [
         {
             id: getId(),
+            name: 'Kubernetes Helm Microservices Platform',
+            url: 'https://maheshbabu-devops.github.io/Kubernetes-Helm-Microservices/',
+            repo: 'https://github.com/MaheshBabu-DevOps/Kubernetes-Helm-Microservices',
+            img: '/project-img/new-project.jpg',
+            year: currentYear,
+            tags: ['Kubernetes', 'Helm', 'Docker', 'Prometheus'],
+        },
+        {
+            id: getId(),
             name: 'Terraform AWS Production Infrastructure',
             url: 'https://maheshbabu-devops.github.io/Terraform-AWS-Production-Infra/',
             repo: 'https://github.com/MaheshBabu-DevOps/Terraform-AWS-Production-Infra',
