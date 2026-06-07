@@ -9,7 +9,7 @@ export const projectsSection: ProjectsSectionType = {
             name: 'Kubernetes Helm Microservices Platform',
             url: 'https://maheshbabu-devops.github.io/Kubernetes-Helm-Microservices/',
             repo: 'https://github.com/MaheshBabu-DevOps/Kubernetes-Helm-Microservices',
-            img: '/project-img/new-project.jpg',
+            img: '/project-img/inventrack_project_banner.svg',
             year: currentYear,
             tags: ['Kubernetes', 'Helm', 'Docker', 'Prometheus'],
         },
