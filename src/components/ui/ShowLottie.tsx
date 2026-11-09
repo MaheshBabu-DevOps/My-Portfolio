@@ -1,5 +1,13 @@
 'use client';
-import { Player } from '@lottiefiles/react-lottie-player';
+import dynamic from 'next/dynamic';
+
+// lottie-web touches `document` at import time, so it must never run on the server.
+// Newer Node versions define a global `navigator`, which makes the library think it is
+// in a browser and crashes the production build when pages are prerendered.
+const Player = dynamic(
+  () => import('@lottiefiles/react-lottie-player').then((mod) => mod.Player),
+  { ssr: false }
+);
 
 type Props = {
   path: any;
