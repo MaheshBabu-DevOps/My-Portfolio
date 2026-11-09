@@ -19,7 +19,7 @@ export const author = {
 export const seoData = {
   title: 'Mahesh Babu | AWS DevOps Engineer',
   description:
-    'Mahesh Babu is an AWS DevOps Engineer with 3.7 years of experience in CI/CD automation, cloud infrastructure, and containerized environments.',
+    'Mahesh Babu is an AWS DevOps Engineer with 4+ years of experience in CI/CD automation, cloud infrastructure, and containerized environments.',
   author: author.name,
   image: '/mypic.jpg',
   url: 'https://maheshbabu-devops.vercel.app/',

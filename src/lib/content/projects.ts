@@ -1,44 +1,46 @@
 import { ProjectsSectionType } from '@/lib/types/sections'
 import { getId } from '@/lib/utils/helper';
-const currentYear: number = new Date().getFullYear()
+
+// Every card links to a real public repo on github.com/MaheshBabu-DevOps.
+// `url` (card click) and `repo` (GitHub icon) point to the same repo on purpose.
 export const projectsSection: ProjectsSectionType = {
     title: 'my projects',
     projects: [
         {
             id: getId(),
-            name: 'Kubernetes Helm Microservices Platform',
-            url: 'https://maheshbabu-devops.github.io/Kubernetes-Helm-Microservices/',
-            repo: 'https://github.com/MaheshBabu-DevOps/Kubernetes-Helm-Microservices',
-            img: '/project-img/new-project.jpg',
-            year: currentYear,
-            tags: ['Kubernetes', 'Helm', 'Docker', 'Prometheus'],
+            name: 'Offline ROS2 CI/CD Automation (Air-gapped)',
+            url: 'https://github.com/MaheshBabu-DevOps/Docker-Based-Offline-ROS2-CI-CD-Automation-Project-using-Tuleap-and-Jenkins',
+            repo: 'https://github.com/MaheshBabu-DevOps/Docker-Based-Offline-ROS2-CI-CD-Automation-Project-using-Tuleap-and-Jenkins',
+            img: '/project-img/offline-ros2-cicd.svg',
+            year: 2025,
+            tags: ['Jenkins', 'Docker', 'Tuleap', 'NGINX'],
         },
         {
             id: getId(),
-            name: 'Terraform AWS Production Infrastructure',
-            url: 'https://maheshbabu-devops.github.io/Terraform-AWS-Production-Infra/',
-            repo: 'https://github.com/MaheshBabu-DevOps/Terraform-AWS-Production-Infra',
-            img: '/project-img/new-project.jpg',
-            year: currentYear,
-            tags: ['Terraform', 'AWS', 'GitHub Actions', 'IaC'],
+            name: 'Spring Boot DevOps Pipeline on AWS',
+            url: 'https://github.com/MaheshBabu-DevOps/springboot-banking-webapp',
+            repo: 'https://github.com/MaheshBabu-DevOps/springboot-banking-webapp',
+            img: '/project-img/springboot-aws-devops.svg',
+            year: 2025,
+            tags: ['Terraform', 'AWS', 'Jenkins', 'Docker'],
         },
         {
             id: getId(),
-            name: 'InvenTrack - Inventory & Order Management System',
-            url: 'https://inventory-system-theta-ten.vercel.app',
-            repo: 'https://github.com/MaheshBabu-DevOps/inventory-system',
-            img: '/project-img/inventrack_project_banner.svg',
-            year: currentYear,
-            tags: ['FastAPI', 'React', 'PostgreSQL', 'Docker'],
+            name: 'Zomato DevSecOps Pipeline on Kubernetes',
+            url: 'https://github.com/MaheshBabu-DevOps/Zomato-DevSecOps-Pipeline-Project',
+            repo: 'https://github.com/MaheshBabu-DevOps/Zomato-DevSecOps-Pipeline-Project',
+            img: '/project-img/zomato-devsecops-k8s.svg',
+            year: 2025,
+            tags: ['Jenkins', 'Trivy', 'Kubernetes', 'Grafana'],
         },
         {
             id: getId(),
-            name: 'More Projects Coming Soon',
-            url: 'coming-soon',
-            repo: 'https://github.com/MaheshBabu-DevOps',
-            img: '/project-img/new-project.jpg',
-            year: currentYear,
-            tags: ['DevOps', 'AWS', 'Kubernetes'],
+            name: 'Netflix Clone DevSecOps CI/CD Pipeline',
+            url: 'https://github.com/MaheshBabu-DevOps/Netflix-DevSecOps-CI-CD-Pipeline',
+            repo: 'https://github.com/MaheshBabu-DevOps/Netflix-DevSecOps-CI-CD-Pipeline',
+            img: '/project-img/netflix-devsecops.svg',
+            year: 2025,
+            tags: ['Jenkins', 'SonarQube', 'Trivy', 'Kubernetes'],
         },
     ],
 };

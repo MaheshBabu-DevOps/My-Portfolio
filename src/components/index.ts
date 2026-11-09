@@ -3,6 +3,7 @@ import Button from './buttons/Button';
 import DarkModeButton from './buttons/DarkModeButton';
 import Link from './buttons/Link';
 import NavButton from './buttons/NavButton';
+import ExperienceTimeline from './lists/ExperienceTimeline';
 import ListItem from './lists/ListItem';
 import TabList from './lists/TabList';
 import Skill from './skills/Skill';
@@ -21,6 +22,7 @@ export {
   Button,
   Cursor,
   DarkModeButton,
+  ExperienceTimeline,
   Link,
   ListItem,
   NavButton,

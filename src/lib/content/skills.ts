@@ -14,41 +14,55 @@ export const skillsSection: SkillsSectionType = {
             dark: '/lotties/cloudinfra.json',
         },
         points: [
-            'Implemented agentic CI pipelines using the Jenkins MCP Plugin with Claude AI for automated issue detection, code fixes, and pull request generation, reducing manual debugging effort.',
-            'Built GitHub Actions workflows to automate Docker image builds and pushes to AWS ECR for production deployments across multiple repositories.',
-            'Managed AWS cloud infrastructure including EC2, ECR, EKS, and S3 for application deployments, with monitoring via CloudWatch, Prometheus, and Grafana.',
-            'Provisioned and maintained Kubernetes clusters with namespaces, network policies, secrets, persistent volumes, and autoscaling for high availability.',
-            'Annotated large image datasets using LabelMe and CVAT for object detection, segmentation, and leveraged Kubernetes to automate annotation workflows, reducing manual effort by 70% and improving data quality.',
-            'Optimized Docker image sizes by 50% and enforced security best practices including .env secrets management and container access controls.',
+            'Designed an Active-Active High Availability architecture on AWS (EC2, ALB, EFS, RDS, DocumentDB, ElastiCache) with multi-AZ failover in under 30 seconds.',
+            'Built Jenkins and GitHub Actions CI/CD pipelines that automate Docker image builds, version tagging, and publishing to Harbor and AWS ECR.',
+            'Implemented a two-tier AI-powered PR review pipeline using Claude AI, combining static code analysis and semantic reviews before merge.',
+            'Managed production Kubernetes workloads on AWS EKS through Rancher, covering deployments, scaling, secrets, and SSL certificate renewals.',
+            'Eliminated hardcoded credentials by migrating secrets to HashiCorp Vault, improving rotation and access control.',
+            'Monitored infrastructure, databases, and CI/CD pipelines with Prometheus and Grafana; managed PostgreSQL, MongoDB, and Redis including backup and restore.',
+            'Annotated image datasets with LabelMe and CVAT and deployed ML models on Kubernetes to automate annotation workflows.',
         ],
         softwareSkills: [
-            // Agile / Project Management
+            // Project Management & Collaboration
             { name: 'Jira', icon: 'logos:jira' },
             { name: 'Tuleap', icon: '/tuleap.svg' },
-            // Code
+            { name: 'Slack', icon: 'logos:slack-icon' },
+            // Version Control
             { name: 'Git', icon: 'logos:git-icon' },
             { name: 'GitHub', icon: 'uil:github' },
-            // Build
+            // CI/CD
             { name: 'Jenkins', icon: 'devicon:jenkins' },
             { name: 'GitHub Actions', icon: 'logos:github-actions' },
-            // Test / Security
-            { name: 'CodeAnt AI', icon: 'carbon:ai' },
-            // Package
+            // Containerization & Registry
             { name: 'Docker', icon: 'logos:docker-icon' },
-            { name: 'Helm', icon: 'devicon:helm' },
-            // Deploy / Orchestrate
+            { name: 'Harbor', icon: 'devicon:harbor' },
+            { name: 'Portainer', icon: 'devicon:portainer' },
+            // Orchestration
             { name: 'Kubernetes', icon: 'logos:kubernetes' },
             { name: 'Rancher', icon: 'devicon:rancher' },
-            { name: 'Terraform', icon: 'logos:terraform-icon' },
             // Cloud
             { name: 'AWS', icon: 'skill-icons:aws-dark' },
-            // Monitor
+            // Security
+            { name: 'Trivy', icon: 'simple-icons:trivy' },
+            { name: 'CodeAnt AI', icon: 'carbon:ai' },
+            { name: 'HashiCorp Vault', icon: 'logos:vault-icon' },
+            // Monitoring
             { name: 'Prometheus', icon: 'logos:prometheus' },
             { name: 'Grafana', icon: 'logos:grafana' },
-            // Infrastructure / Platform
+            // Infrastructure / Automation
             { name: 'NGINX', icon: 'logos:nginx' },
+            { name: 'Ansible', icon: 'logos:ansible' },
+            // Databases & Caching
+            { name: 'PostgreSQL', icon: 'logos:postgresql' },
+            { name: 'MongoDB', icon: 'logos:mongodb-icon' },
+            { name: 'Redis', icon: 'logos:redis' },
+            // Operating Systems
             { name: 'Ubuntu', icon: 'logos:ubuntu' },
             { name: 'Red Hat', icon: 'logos:redhat' },
+            { name: 'Windows', icon: 'logos:microsoft-windows-icon' },
+            // AI Tools
+            { name: 'Claude AI', icon: 'logos:claude-icon' },
+            { name: 'Cursor', icon: 'logos:cursor' },
         ],
     },
     {

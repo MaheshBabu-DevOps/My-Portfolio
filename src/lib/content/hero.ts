@@ -4,8 +4,8 @@ import { resumeFileName } from '@/lib/utils/config'
 export const heroSection: HeroSectionType = {
     subtitle: 'Hi, my name is',
     title: 'Mahesh Babu',
-    tagline: '',
-    description: "I'm an AWS DevOps Engineer with 3.7 years of experience in CI/CD automation, cloud infrastructure, and containerized environments.",
+    tagline: 'AWS DevOps Engineer.',
+    description: "I'm an AWS DevOps Engineer with 4+ years of experience in CI/CD automation, cloud infrastructure, and containerized environments.",
     specialText: "",
     items:[
         'AWS DevOps Engineer',
