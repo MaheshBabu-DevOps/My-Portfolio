@@ -84,15 +84,23 @@ const Hero = () => {
         >
           <a
             href={SHOW_PROJECTS ? '#projects' : '#experience'}
+            data-magnetic
             className="px-6 py-3 text-sm font-medium transition-all rounded-md bg-accent text-slate-900 hover:brightness-110 hover:-translate-y-0.5"
           >
             {SHOW_PROJECTS ? 'View my work' : 'View my experience'}
           </a>
           <a
             href="#contact"
+            data-magnetic
             className="px-6 py-3 text-sm font-medium transition-all border rounded-md border-accent text-accent hover:bg-accent-light hover:-translate-y-0.5"
           >
             Get in touch
+          </a>
+          <a
+            href="/desktop"
+            className="hidden px-2 py-3 text-sm font-medium transition-colors md:inline-block text-dark-2 hover:text-accent"
+          >
+            Desktop view ↗
           </a>
         </motion.div>
 

@@ -35,7 +35,10 @@ const TimelineItem = ({
         }`}
       />
 
-      <div className="p-5 transition-colors border rounded-xl border-dark-3 bg-bg-secondary/60 hover:border-accent/40 sm:p-6">
+      <div
+        data-spotlight
+        className="p-5 transition-colors border rounded-xl border-dark-3 bg-bg-secondary/60 hover:border-accent/40 sm:p-6"
+      >
         <div className="flex flex-wrap items-start justify-between gap-2">
           <div>
             <h3 className="text-lg font-medium text-dark-1">{role}</h3>
@@ -89,7 +92,7 @@ const TimelineItem = ({
 const ExperienceTimeline = ({ experiences }: Props) => {
   return (
     <ol className="relative ml-1.5 space-y-8 border-l border-dark-3">
-      {experiences.map((experience, i) => (
+      {experiences.map((experience) => (
         <TimelineItem
           key={`${experience.company}-${experience.started}`}
           {...experience}

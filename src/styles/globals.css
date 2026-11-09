@@ -88,3 +88,27 @@
     display: none;
   }
 }
+
+/* CARD SPOTLIGHT: a soft light that follows the mouse inside a card (see components/ui/Spotlight.tsx) */
+[data-spotlight] {
+  position: relative;
+}
+
+[data-spotlight]::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.25s ease;
+  background: radial-gradient(
+    260px circle at var(--mx, 50%) var(--my, 50%),
+    rgb(56 189 248 / 0.13),
+    transparent 70%
+  );
+}
+
+[data-spotlight]:hover::before {
+  opacity: 1;
+}
