@@ -8,6 +8,15 @@ export const projectsSection: ProjectsSectionType = {
     projects: [
         {
             id: getId(),
+            name: 'Dockerized Multi-Stage Web App with CI',
+            url: 'https://github.com/MaheshBabu-DevOps/dockerized-multistage-webapp',
+            repo: 'https://github.com/MaheshBabu-DevOps/dockerized-multistage-webapp',
+            img: '/project-img/dockerized-multistage-webapp.svg',
+            year: 2026,
+            tags: ['Docker', 'Compose', 'GitHub Actions', 'Nginx'],
+        },
+        {
+            id: getId(),
             name: 'Offline ROS2 CI/CD Automation (Air-gapped)',
             url: 'https://github.com/MaheshBabu-DevOps/Docker-Based-Offline-ROS2-CI-CD-Automation-Project-using-Tuleap-and-Jenkins',
             repo: 'https://github.com/MaheshBabu-DevOps/Docker-Based-Offline-ROS2-CI-CD-Automation-Project-using-Tuleap-and-Jenkins',
