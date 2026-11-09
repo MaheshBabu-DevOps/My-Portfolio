@@ -8,6 +8,8 @@ import {
   Skills,
 } from '@/containers';
 
+import { SHOW_PROJECTS } from '@/lib/utils/config';
+
 import type { NextPage } from 'next';
 
 /**
@@ -25,7 +27,7 @@ const Home: NextPage = () => {
         <Skills />
         
         <Experience />
-        <Projects />
+        {SHOW_PROJECTS && <Projects />}
         <Contact />
       </Layout>
     </>

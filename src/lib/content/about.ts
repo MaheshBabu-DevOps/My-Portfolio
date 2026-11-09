@@ -31,13 +31,15 @@ export const aboutSection: AboutSectionType = {
         'NGINX',
         'PostgreSQL',
         'Redis',
+        'MongoDB',
+        // Security / Secrets
+        'HashiCorp Vault',
+        'Harbor',
         // Programming
         'Python',
         'Bash',
         // AI & Annotation
-        'OpenCV',
-        'LabelMe',
-        'CVAT',
+        'Claude AI',
       ],
     },
     img: '/mypic.jpg',

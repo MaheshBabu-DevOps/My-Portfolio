@@ -27,8 +27,8 @@
 
   /* Dark Theme */
   .dark {
-    --color-bg: theme(colors.slate.900);
-    --color-bg-secondary: theme(colors.slate.800);
+    --color-bg: #0d1117;
+    --color-bg-secondary: #161b22;
     --color-accent: theme(colors.sky.400);
     --color-accent-light: theme(colors.sky.400/0.1);
     --color-text: theme(colors.slate.400);
@@ -53,6 +53,30 @@
   @apply text-3xl sm:text-4xl capitalize font-medium mb-8 sm:mb-12 text-dark-2;
 }
 
+
+/* SITE BACKGROUND: soft grid + colored glows, fixed behind all content */
+.site-bg {
+  position: fixed;
+  inset: 0;
+  z-index: -10;
+  pointer-events: none;
+  background-image:
+    radial-gradient(60rem 40rem at 15% 10%, rgb(56 189 248 / 0.14), transparent 60%),
+    radial-gradient(50rem 40rem at 90% 30%, rgb(99 102 241 / 0.14), transparent 60%),
+    radial-gradient(45rem 35rem at 50% 100%, rgb(20 184 166 / 0.10), transparent 60%);
+}
+
+.site-bg::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(to right, rgb(148 163 184 / 0.08) 1px, transparent 1px),
+    linear-gradient(to bottom, rgb(148 163 184 / 0.08) 1px, transparent 1px);
+  background-size: 48px 48px;
+  -webkit-mask-image: radial-gradient(ellipse at 50% 30%, #000 20%, transparent 75%);
+  mask-image: radial-gradient(ellipse at 50% 30%, #000 20%, transparent 75%);
+}
 
 .logo{
   width: 50px;

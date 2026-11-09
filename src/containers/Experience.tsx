@@ -1,5 +1,5 @@
 'use client';
-import { TabList } from '@/components';
+import { ExperienceTimeline } from '@/components';
 
 import { experienceSection } from '../lib/content/experience';
 import { getSectionAnimation } from '../styles/animations';
@@ -13,7 +13,7 @@ const Experience = () => {
       {...getSectionAnimation}
     >
       <h2 className="heading-secondary">{experienceSection.title}</h2>
-      <TabList experiences={experienceSection.experiences} />
+      <ExperienceTimeline experiences={experienceSection.experiences} />
     </motion.section>
   );
 };

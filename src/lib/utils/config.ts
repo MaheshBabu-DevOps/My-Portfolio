@@ -1,5 +1,8 @@
 export const PROJECTS_INITIALLY = 6;
 
+// Set to true to show the Projects section, nav link and hero button again.
+export const SHOW_PROJECTS = true;
+
 export const resumeFileName = 'MaheshBabu_Resume.pdf';
 
 export const blurImageURL =

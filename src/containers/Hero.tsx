@@ -1,17 +1,31 @@
 'use client';
 import { heroSection } from '@/lib/content/hero';
 import useWindowWidth from '@/lib/hooks/use-window-width';
+import { SHOW_PROJECTS } from '@/lib/utils/config';
 import { getBreakpointsWidth } from '@/lib/utils/helper';
 
-import { Button, Wrapper } from '@/components';
+import { Wrapper } from '@/components';
+import DevOpsLogo from '@/components/ui/DevOpsLogo';
+import TerminalAnimation from '@/components/ui/TerminalAnimation';
 
 import { slideUp } from '@/styles/animations';
 
 import { motion } from 'framer-motion';
 
+const stats = [
+  { value: '4+ Years', label: 'Total experience' },
+  {
+    value: '2 Industries',
+    label: 'Robotics Industrial Automation and Defense sectors',
+  },
+  {
+    value: 'Air-gapped',
+    label: 'Offline CI/CD environments',
+  },
+];
+
 const Hero = () => {
-  const { cta, subtitle, title, tagline, description, specialText } =
-    heroSection;
+  const { subtitle, title, tagline, description } = heroSection;
 
   const windowWidth = useWindowWidth();
   const md = getBreakpointsWidth('md');
@@ -23,84 +37,94 @@ const Hero = () => {
   return (
     <Wrapper
       id="hero"
-      className="flex flex-col justify-center h-full min-h-screen gap-6 mt-12 xs:gap-7 xs:mt-0"
+      className="grid items-center h-full min-h-screen gap-12 mt-12 lg:grid-cols-[1.15fr_1fr] xs:mt-0"
     >
-      <motion.p
-        variants={slideUp({ delay: getAnimationDelay(0) })}
-        initial="hidden"
-        animate="show"
-        className="font-mono text-sm md:text-base text-accent"
-      >
-        {subtitle}
-      </motion.p>
+      <div className="flex flex-col gap-6">
+        <div className="max-w-5xl text-4xl font-bold tracking-tighter md:text-6xl">
+          <motion.p
+            variants={slideUp({ delay: getAnimationDelay(1) })}
+            initial="hidden"
+            animate="show"
+            className="mb-3 font-mono text-sm font-normal tracking-normal md:text-base text-accent"
+          >
+            {subtitle}
+          </motion.p>
+          <motion.h1
+            variants={slideUp({ delay: getAnimationDelay(1) })}
+            initial="hidden"
+            animate="show"
+            className="text-slate-900 dark:text-slate-100 capitalize mb-2 leading-[1.1]"
+          >
+            {title}
+          </motion.h1>
+          <motion.h2
+            variants={slideUp({ delay: getAnimationDelay(2) })}
+            initial="hidden"
+            animate="show"
+            className="leading-[1.2] bg-gradient-to-r from-sky-400 via-indigo-400 to-teal-300 bg-clip-text text-transparent"
+          >
+            {tagline}
+          </motion.h2>
+        </div>
 
-      <div className="max-w-5xl text-4xl font-bold tracking-tighter md:text-7xl">
-        <motion.h1
-          variants={slideUp({ delay: getAnimationDelay(1) })}
+        <motion.p
+          variants={slideUp({ delay: getAnimationDelay(3) })}
           initial="hidden"
           animate="show"
-          className="text-slate-900 dark:text-slate-200 capitalize mb-2 leading-[1.1]"
+          className="max-w-xl text-base md:text-lg"
         >
-          {title}
-        </motion.h1>
-        <motion.h1
-          variants={slideUp({ delay: getAnimationDelay(2) })}
+          {description}
+        </motion.p>
+
+        <motion.div
+          variants={slideUp({ delay: getAnimationDelay(4) })}
           initial="hidden"
           animate="show"
-          className="leading-[1.2]"
+          className="flex flex-wrap items-center gap-3 mt-2"
         >
-          {tagline}
-        </motion.h1>
-      </div>
+          <a
+            href={SHOW_PROJECTS ? '#projects' : '#experience'}
+            className="px-6 py-3 text-sm font-medium transition-all rounded-md bg-accent text-slate-900 hover:brightness-110 hover:-translate-y-0.5"
+          >
+            {SHOW_PROJECTS ? 'View my work' : 'View my experience'}
+          </a>
+          <a
+            href="#contact"
+            className="px-6 py-3 text-sm font-medium transition-all border rounded-md border-accent text-accent hover:bg-accent-light hover:-translate-y-0.5"
+          >
+            Get in touch
+          </a>
+        </motion.div>
 
-      <motion.p
-        variants={slideUp({ delay: getAnimationDelay(3) })}
-        initial="hidden"
-        animate="show"
-        className="max-w-xl text-base md:text-lg"
-      >
-        {description}
-      </motion.p>
-
-      <motion.p
-        variants={slideUp({ delay: getAnimationDelay(3) })}
-        initial="hidden"
-        animate="show"
-        className="flex items-center gap-1 text-sm text-accent font-mono"
-      >
-        📍 Bangalore, India
-      </motion.p>
-
-      <motion.p
-        variants={slideUp({ delay: getAnimationDelay(4) })}
-        initial="hidden"
-        animate="show"
-        className="font-mono text-xs md:text-sm text-accent"
-      >
-        {specialText}<br/><br/>
-        {/* {items[0]} &nbsp; {items[1]}
-        <br/>
-        {items[2]} &nbsp; {items[3]} */}
-      </motion.p>
-
-      {cta && (<>
-        <Button
-          size="lg"
-          type="link"
+        <motion.dl
           variants={slideUp({ delay: getAnimationDelay(5) })}
           initial="hidden"
           animate="show"
-          href={cta?.url ?? '#'}
-          className={`mt-5 xs:mt-8 md:mt-10 ${
-            cta.hideInDesktop ? 'md:hidden' : ''
-          }`}
-          sameTab={cta?.sameTab}
+          className="grid grid-cols-3 gap-4 pt-6 mt-2 border-t max-w-xl border-slate-500/20"
         >
-          {cta.title}
-        </Button>
-        </>
-      )}
+          {stats.map((s) => (
+            <div key={s.label}>
+              <dt className="text-base font-semibold sm:text-lg text-dark-1">{s.value}</dt>
+              <dd className="text-xs">{s.label}</dd>
+            </div>
+          ))}
+        </motion.dl>
+      </div>
 
+      <motion.div
+        variants={slideUp({ delay: getAnimationDelay(3) })}
+        initial="hidden"
+        animate="show"
+        className="hidden lg:block"
+        aria-hidden="true"
+      >
+        <div className="flex flex-col items-center gap-8">
+          <DevOpsLogo />
+          <div className="w-full">
+            <TerminalAnimation />
+          </div>
+        </div>
+      </motion.div>
     </Wrapper>
   );
 };

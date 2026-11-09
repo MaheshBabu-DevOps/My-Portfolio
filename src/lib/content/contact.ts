@@ -5,7 +5,7 @@ export const contactSection: ContactSectionType = {
     title: 'Contact Me',
     subtitle: "what's next",
     paragraphs: [
-    'Currently open to Remote/Onsite full-time DevOps and Cloud Engineer opportunities!',
+    'Currently open to Remote/Hybrid/Onsite full-time DevOps and Cloud Engineer opportunities, and available for freelance projects!',
     'Email : maheshtemmanaboina@gmail.com',
     ],
     link: `mailto:${author.email}`,

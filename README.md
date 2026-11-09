@@ -4,7 +4,7 @@ Hi! My name is **Mahesh Babu**, and this is my portfolio website where I showcas
 
 ## Professional Summary
 
-I'm an **AWS DevOps Engineer** with 3.7 years of experience in CI/CD automation, cloud infrastructure, and containerized environments. I have worked across autonomous mobile robotics (**Ati Motors**) and defense (**DRDO/CAIR**) sectors, building reliable pipelines, managing Docker containers and Kubernetes clusters, and automating cloud infrastructure on AWS.
+I'm an **AWS DevOps Engineer** with 4+ years of experience in CI/CD automation, cloud infrastructure, and containerized environments. I have worked across autonomous mobile robotics (**Ati Motors**) and defense (**DRDO/CAIR**) sectors, building reliable pipelines, managing Docker containers and Kubernetes clusters, and automating cloud infrastructure on AWS.
 
 ### 🎓 Background
 
