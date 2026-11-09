@@ -33,6 +33,7 @@ I'm an **AWS DevOps Engineer** with 4+ years of experience in CI/CD automation, 
 
 | Project | What it shows |
 |---|---|
+| [Dockerized Multi-Stage Web App with CI](https://github.com/MaheshBabu-DevOps/dockerized-multistage-webapp) | Multi-stage Dockerfiles (images 80% and 95% smaller), Docker Compose with PostgreSQL and Redis, and a GitHub Actions pipeline that tests and publishes images |
 | [Offline ROS2 CI/CD Automation](https://github.com/MaheshBabu-DevOps/Docker-Based-Offline-ROS2-CI-CD-Automation-Project-using-Tuleap-and-Jenkins) | Air-gapped CI/CD with Jenkins, Tuleap, Docker and NGINX |
 | [Spring Boot DevOps Pipeline on AWS](https://github.com/MaheshBabu-DevOps/springboot-banking-webapp) | Terraform, Jenkins and Docker for a Spring Boot app on AWS |
 | [Zomato DevSecOps Pipeline](https://github.com/MaheshBabu-DevOps/Zomato-DevSecOps-Pipeline-Project) | Jenkins, Trivy, Kubernetes, Prometheus and Grafana |
