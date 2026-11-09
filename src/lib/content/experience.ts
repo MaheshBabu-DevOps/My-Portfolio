@@ -4,7 +4,7 @@ export const experienceSection: ExperienceSectionType = {
     title: "where i've worked",
     experiences: [
         {
-            company: 'Ati Motors',
+            company: 'Ati Robotics',
             companyUrl: 'https://atimotors.com/',
             role: 'AWS DevOps Engineer',
             started: 'Sep 2025',

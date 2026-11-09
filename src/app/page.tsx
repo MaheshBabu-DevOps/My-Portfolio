@@ -1,14 +1,15 @@
+import { SHOW_PROJECTS } from '@/lib/utils/config';
+
 import {
   About,
   Contact,
+  Education,
   Experience,
   Hero,
   Layout,
   Projects,
   Skills,
 } from '@/containers';
-
-import { SHOW_PROJECTS } from '@/lib/utils/config';
 
 import type { NextPage } from 'next';
 
@@ -27,6 +28,7 @@ const Home: NextPage = () => {
         <Skills />
         
         <Experience />
+        <Education />
         {SHOW_PROJECTS && <Projects />}
         <Contact />
       </Layout>
